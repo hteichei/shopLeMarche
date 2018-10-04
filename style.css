@@ -1,0 +1,296 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #333333;
+  background-color: #fff;
+  text-align: center;
+}
+
+.chevy {
+  color: white;
+}
+
+.titleWhite {
+  text-align: center;
+  color: white;
+  top: 10px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 5em;
+  font-weight: bold;
+}
+
+.titleBlack {
+  text-align: center;
+  color: black;
+  top: 10px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+#cover {
+  background-image: url('./images/IMG_H_3.jpg');
+  /* background-image: url('https://images.unsplash.com/photo-1528739146320-61d4c9f46eb0?ixlib=rb-0.3.5&s=1eea4e3bf8219db371277d8425674e05&auto=format&fit=crop&w=1500&q=80'); */
+  background-repeat: no-repeat;
+  background-position: center center;
+  max-height: 400px;
+  background-size: cover;
+  padding: 400px 0;
+  background-color: white;
+  box-shadow: 1px 2px 4px rgba(34, 25, 25, 0.4);
+  -moz-box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  -webkit-box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+}
+
+#aboutUs {
+  /* max-height: 350px; */
+  background-color: #dcf3ed;
+  text-align: center;
+  box-shadow: 0.8em 1em 1em rgba(0, 0, 0, 0.3);
+}
+
+#aboutUs > p {
+  text-align: center;
+  margin-right: 25%;
+  margin-left: 25%;
+  padding: 1.5em 2em 2em 2em;
+  line-height: 2em;
+}
+
+#aboutUs > h1 {
+  padding-top: 1em;
+  font-family: 'Dancing Script', cursive;
+}
+
+.circleCats > ul > li > img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  margin-bottom: 2.5em;
+  box-shadow: 2px 3px 5px rgba(34, 25, 25, 0.6);
+  -moz-box-shadow: 0 1px 2px rgba(34, 25, 25, 0.6);
+  -webkit-box-shadow: 0 1px 3px rgba(34, 25, 25, 0.6);
+}
+
+.about-li-item {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+#myCarousel {
+  padding-top: 2.5em;
+  padding-bottom: 7em;
+}
+
+.footer {
+  margin-top: 2em;
+  background-color: #dcf3ed;
+  padding: 0 0 2.5rem 0;
+  text-align: center;
+}
+
+#follow {
+  padding-top: 1.25em;
+  padding-bottom: 0.25em;
+  text-align: center;
+}
+
+#extra-info {
+  padding-bottom: 1.25em;
+}
+
+.unstyled-list {
+  display: block;
+  list-style: none;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  padding-left: 0 !important;
+}
+
+.foot-li-item {
+  display: inline-block;
+  padding: 0 10px 0 0;
+}
+
+.fab {
+  font-size: 2em;
+  padding: 0 1em;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.fab:hover {
+  color: #734f96;
+}
+
+/* .carousel-fullscreen .carousel-inner .item {
+  height: 100vh;
+  min-height: 600px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+/* carousel fullscreen - vertically centered caption*/
+
+/* .carousel-fullscreen .carousel-caption {
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+} */
+
+@media (min-width: 768px) {
+  /* show 3 items */
+  .carousel-inner .active,
+  .carousel-inner .active + .carousel-item,
+  .carousel-inner .active + .carousel-item + .carousel-item,
+  .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+    display: block;
+  }
+
+  .carousel-inner
+    .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+  .carousel-inner
+    .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)
+    + .carousel-item,
+  .carousel-inner
+    .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)
+    + .carousel-item
+    + .carousel-item,
+  .carousel-inner
+    .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item {
+    transition: none;
+  }
+
+  .carousel-inner .carousel-item-next,
+  .carousel-inner .carousel-item-prev {
+    position: relative;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .carousel-inner
+    .active.carousel-item
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item {
+    position: absolute;
+    top: 0;
+    right: -25%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* left or forward direction */
+  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+  .carousel-item-next.carousel-item-left + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+  .carousel-item-next.carousel-item-left
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item,
+  .carousel-item-next.carousel-item-left
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  farthest
+    right
+    hidden
+    item
+    must
+    be
+    abso
+    position
+    for
+    animations
+    */
+    .carousel-inner
+    .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+  */
+
+/* right or prev direction */
+ .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+  .carousel-item-prev.carousel-item-right + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+  .carousel-item-prev.carousel-item-right
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item,
+  .carousel-item-prev.carousel-item-right
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item {
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+  }
+}
+
+a.nav-link:hover {
+  /* font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; */
+  color: #734f96;
+}
+
+a.nav-link {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  position: relative;
+  display: block;
+  padding: 16px 0;
+  margin: 0 12px;
+  letter-spacing: 1px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  transition: color 0.1s, background-color 0.1s, padding 0.2s ease-in;
+  color: black;
+}
+
+a.navbar-brand {
+  color: rgba(0, 0, 0, 0.75) !important;
+  position: relative;
+  display: block;
+  padding: 16px 0;
+  margin: 0 12px;
+  letter-spacing: 1px;
+  font-size: 2em;
+  line-height: 16px;
+  font-weight: 900;
+  font-family: 'Dancing Script', cursive;
+}
+
+#copyright {
+  font-size: 0.7em;
+}
+
+.transparent {
+  background-color: white;
+  opacity: 0.95;
+}
