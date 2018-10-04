@@ -6,11 +6,6 @@ window.addEventListener('hashchange', function() {
   scrollBy(0, -50);
 });
 
-// $('.carousel').carousel({
-//   interval: 5000, //changes the speed
-//   pause: 'false' //pause on hover
-// });
-
 $('#carouselExample').on('slide.bs.carousel', function(e) {
   var $e = $(e.relatedTarget);
   var idx = $e.index();
@@ -32,21 +27,4 @@ $('#carouselExample').on('slide.bs.carousel', function(e) {
       }
     }
   }
-});
-
-$(function() {
-  $('nav a').bind('click', function(event) {
-    event.preventDefault();
-    var $anchor = $(this);
-    console.log($anchor.attr('href'));
-    $('html, body')
-      .stop()
-      .animate(
-        {
-          scrollTop: $($anchor.attr('href')).offset().top
-        },
-        600
-      );
-    event.preventDefault();
-  });
 });
